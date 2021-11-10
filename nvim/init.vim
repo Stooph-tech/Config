@@ -5,6 +5,7 @@ source ~/.vimrc
 set ts=4 sts=3 sw=4 expandtab
 highlight LineNr ctermfg=red
 set relativenumber
+set number relativenumber
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -112,19 +113,28 @@ Plug 'yuezk/vim-js'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'dart-lang/dart-vim-plugin'
+Plug 'jasonwoodland/vim-html-indent'
 call plug#end()
 
 set runtimepath+=~/.vim-plugins/LanguageClient-neovim
-colorscheme onedark
+
+source $HOME/.config/nvim/themes/molokai.vim
 
 map <C-t> :NERDTreeToggle<CR>
 
-set cursorline
-hi cursorline cterm=none term=none
-autocmd WinEnter * setlocal cursorline
-autocmd WinLeave * setlocal nocursorline
-highlight CursorLine guibg=#303000 ctermbg=234
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%80v.\+/
+let g:LanguageClient_serverCommands = {
+    \ 'sh': ['bash-language-server', 'start']
+    \ }
+
+let g:python_host_prog = expand('/usr/bin/python2.7')
+let g:python3_host_prog = expand('/usr/bin/python3.9')
+
+"set cursorline
+"hi cursorline cterm=none term=none
+"autocmd WinEnter * setlocal cursorline
+"autocmd WinLeave * setlocal nocursorline
+"highlight CursorLine guibg=#303000 ctermbg=234
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%80v.\+/
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
