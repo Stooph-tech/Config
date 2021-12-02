@@ -1,2 +1,2 @@
 # Config
-My config
+My config i3 / nvim / polybar config
