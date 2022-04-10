@@ -35,7 +35,7 @@ cursor-click = pointer
 
 
 ;====Module settings+======================================
-modules-left = windows explorer google amazon github reddit facebook youtube workspaces-xmonad
+modules-left = explorer google amazon github reddit facebook youtube workspaces-xmonad
 modules-center = date
 modules-right = pkg xbacklight volume wlan cpu-graph memory battery powermenu
 ;==========================================================
@@ -58,15 +58,6 @@ content = 
 content-padding = 1
 content-foreground = ${colors.fg}
 content-underline = ${colors.adapta-cyan}
-;click-left = rmenu_1
-;click-right = rmenu_wi_1
-
-[module/windows]
-type = custom/text
-;content = 
-;content-padding = 1
-;content-foreground = ${colors.fg}
-;content-underline = ${colors.adapta-cyan}
 ;click-left = rmenu_1
 ;click-right = rmenu_wi_1
 
@@ -115,7 +106,7 @@ label-empty-foreground = ${colors.fg}
 type = custom/text
 ;content = 
 content = 
-content-padding = 2
+content-padding = 3
 ;content-margin = 1
 content-foreground = ${colors.fg}
 content-underline = ${colors.adapta-cyan}
@@ -124,7 +115,7 @@ click-left = thunar
 [module/google]
 type = custom/text
 content = 
-content-padding = 1
+content-padding = 2
 ;content-margin = 1
 content-foreground = ${colors.fg}
 content-underline = ${colors.adapta-cyan}
@@ -133,7 +124,7 @@ click-left = xdg-open https://www.google.com/
 [module/amazon]
 type = custom/text
 content = 
-content-padding = 1
+content-padding = 2
 ;content-margin = 1
 content-foreground = ${colors.fg}
 content-underline = ${colors.adapta-cyan}
@@ -142,7 +133,7 @@ click-left = xdg-open https://www.amazon.com/
 [module/github]
 type = custom/text
 content = 
-content-padding = 1
+content-padding = 2
 ;content-margin = 1
 content-foreground = ${colors.fg}
 content-underline = ${colors.adapta-cyan}
@@ -152,7 +143,7 @@ click-left = xdg-open https://www.github.com/
 type = custom/text
 content = 
 ;content = 
-content-padding = 1
+content-padding = 2
 ;content-margin = 1
 content-foreground = ${colors.fg}
 content-underline = ${colors.adapta-cyan}
@@ -161,7 +152,7 @@ click-left = xdg-open https://www.reddit.com/
 [module/facebook]
 type = custom/text
 content = 
-content-padding = 1
+content-padding = 2
 ;content-margin = 1
 content-foreground = ${colors.fg}
 content-underline = ${colors.adapta-cyan}
@@ -171,7 +162,7 @@ click-left = xdg-open https://www.facebook.com/
 type = custom/text
 content = 
 ;content = 
-content-padding = 1
+content-padding = 2
 ;content-margin = 1
 content-foreground = ${colors.fg}
 content-underline = ${colors.adapta-cyan}
@@ -315,7 +306,6 @@ label = %percentage_used:2%%
 
 [module/battery]
 
-lybar
 type = internal/battery
 full-at = 89
 battery = BAT0
